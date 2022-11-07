@@ -1,0 +1,18 @@
+{
+    "sourceFile": "admin/don_hang/don_hang_da_xac_nhan.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1658818524786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1658818524786,
+            "name": "Commit-0",
+            "content": "<?php\r\nif (isset($don_hang_da_xac_nhan)) {\r\n    if (is_array($don_hang_da_xac_nhan)) {\r\n        if (count($don_hang_da_xac_nhan) > 0) {\r\n            foreach ($don_hang_da_xac_nhan as $dh) {\r\n                extract($dh);\r\n                extract(hang_hoa_select_by_id($ma_hh));\r\n                extract(khach_hang_getinfo($id_kh));\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n?>\r\n<h5 class=\"alert alert-primary\">Đơn hàng đã xác nhận</h5>\r\n<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th scope=\"col\">#</th>\r\n            <th scope=\"col\">Mã đơn hàng</th>\r\n            <th scope=\"col\">Mã hàng hoá</th>\r\n            <th scope=\"col\">Tên khách hàng</th>\r\n            <th scope=\"col\">Ngày mua</th>\r\n            <th scope=\"col\">Sản phẩm</th>\r\n            <th scope=\"col\">Số lượng mua</th>\r\n            <th scope=\"col\">Đơn giá</th>\r\n            <th scope=\"col\">Tổng tiền</th>\r\n            <th scope=\"col\">Điện thoại</th>\r\n            <th scope=\"col\">Địa chỉ</th>\r\n            <th scope=\"col\">Trạng thái</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <?php\r\n        $i = 0;\r\n        if (isset($don_hang_da_xac_nhan)) {\r\n            if (count($don_hang_da_xac_nhan) > 0) {\r\n                foreach ($don_hang_da_xac_nhan as $dh) {\r\n                    extract($dh);\r\n                    extract(hang_hoa_select_by_id($ma_hh));\r\n                    extract(khach_hang_getinfo($id_kh));\r\n                    $i++; ?>\r\n                    <tr>\r\n                        <th scope=\"row\"><?php echo $i; ?></th>\r\n                        <td><?php echo $id_hoa_don; ?></td>\r\n                        <td><?php echo $ma_hh; ?></td>\r\n                        <td><?php echo $ho_ten; ?></td>\r\n                        <td><?php echo $ngay_dat_hang; ?></td>\r\n                        <td class=\"text-overflow\"><?php echo $ten_hh; ?></td>\r\n                        <td><?php echo $so_luong_mua; ?></td>\r\n                        <td><?php echo $don_gia; ?></td>\r\n                        <td><?php echo $so_luong_mua * $don_gia; ?></td>\r\n                        <td><?php echo $so_dien_thoai; ?></td>\r\n                        <td><?php echo $dia_chi; ?></td>\r\n                        <td>\r\n                            <p class=\"text-danger\"><?php echo $tinh_trang; ?></p><a class=\"btn btn-success\" href=\"index.php?giao_thanh_cong&id_hoa_don=<?php echo $id_hoa_don; ?>\">Đã giao</a>\r\n                        </td>\r\n                    </tr>\r\n                <?php\r\n                }\r\n            } else { ?>\r\n                <h5 class=\"alert alert-danger\">Hiện tại chưa có đơn hàng nào</h5>\r\n\r\n            <?php\r\n            }\r\n        } else { ?>\r\n            <h5 class=\"alert alert-danger\">Hiện tại chưa có đơn hàng nào</h5>\r\n        <?php\r\n        }\r\n        ?>\r\n\r\n    </tbody>\r\n</table>\r\n<td class=\"\"><a class=\"btn btn-primary\" href=\"javascript:history.back()\">Quay lại</a></td>"
+        }
+    ]
+}

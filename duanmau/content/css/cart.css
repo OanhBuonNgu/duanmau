@@ -1,0 +1,118 @@
+
+.cart {
+  font-size: 1.3rem;
+}
+.cart__inner-productTitle{
+  font-size: 2rem;
+  text-transform: uppercase;
+  
+}
+.cart__inner-product-heading {
+  background-color: white;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+.cart__inner-product-items {
+  margin: 1.3% 0;
+  padding: 20px 10px;
+  border-radius: 3px;
+}
+.cart__inner-product-items-img img {
+  width: 100px;
+}
+.cart__inner-product-items {
+  background-color: white;
+}
+.cart__inner-product-items-price {
+  font-weight: 500;
+}
+.cart__inner-product-items-finalPrice {
+  font-weight: 500;
+  color: var(--primary);
+}
+.cart__inner-product-items-name a {
+  color: var(--dark);
+}
+.cart__inner-product-items-name a:hover {
+  color: #007bff;
+}
+.quantityInput {
+  text-align: center;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ced4da;
+  padding: 2px;
+}
+
+/* cart total prices */
+.cart__total-prices-shipAddress {
+  background-color: white;
+  padding: 10px 15px;
+  margin-top: 3%;
+  border-radius: 3px;
+}
+.shipAddress-title {
+  font-size: 1.5rem;
+}
+.shipAddress-title-name {
+  border-right: 1px solid rgba(224, 224, 224);
+  padding-right: 10px;
+  margin-right: 8px;
+  font-weight: 600;
+}
+.shipAddress-title-phone {
+  font-weight: 600;
+
+}
+.shipAddress-heading1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.shipAddress-addres{
+color:var(--secondary);
+}
+.shipAddress-mess{
+  color:var(--secondary);
+
+}
+.icon-delete{
+  color:var(--secondary);
+}
+.cart__price-value{
+  font-weight: 600;
+}
+.cart-price-total .cart__price-value{
+color:var(--primary);
+font-size: 2.2rem;
+}
+.cart__total-price {
+  background-color: white;
+  margin: 4% 0;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 1.4rem;
+}
+.btnCheckout {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+.btnCheckout:hover {
+  opacity: 0.9;
+  color: white;
+}
+.shipAddres-btn-link {
+  color: white;
+  font-size: 1.4rem;
+}
+.shipAddres-btn-link:hover {
+  color: white;
+}
+.shipAddres-btn {
+  width: 100%;
+  padding:8px 0;
+}
+.shipAddres-btn:hover{
+  opacity: .9;
+}

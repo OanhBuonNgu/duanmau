@@ -1,0 +1,488 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --foreign: #76de60;
+  --primary: #ff4157;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.4rem;
+}
+a {
+  text-decoration: none !important;
+}
+.page-link{
+  font-size: 1.6rem;
+}
+input,
+button {
+  outline: none !important;
+}
+button {
+  border: none;
+}
+.container{
+  padding-right:0 !important;
+  padding-left:0 !important;
+
+}
+.col {
+  padding-right:0 !important;
+  padding-left:0 !important;
+}
+.w-5{
+  width: 6%;
+}
+.font-size-primary{
+  font-size: 1.4rem;
+}
+.flex-1{
+  flex:1;
+}
+.font-size-3{
+  font-size:2rem!important;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.opacity-0{
+  opacity: 0;
+}
+.opacity-1{
+  opacity: 0.2;
+}
+.opacity-2{
+  opacity: 0.4;
+}
+.opacity-3{
+  opacity: 0.6;
+}
+.opacity-4{
+  opacity: 0.8;
+}
+.opacity-5{
+  opacity: 1;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+.hr {
+  border-top: 1px solid #eaeaea;
+}
+.btn-fb{
+  background-color:#1877F2;
+  font-size: 1rem;
+  
+}
+.btn-gg{
+  background-color:#DF2029;
+  font-size: 1rem;
+}
+.text-overflow{
+  line-height: 2rem;
+  height: 40px;
+  overflow: hidden;
+  /* white-space:nowrap;
+  text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--dark);
+}
+
+/* modal cart */
+.modal__cart {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  width: 24%;
+  background-color: white;
+  border-radius: 5px;
+  height: 103px;
+  box-shadow: rgb(179 179 179) 1px 7px 15px;
+  z-index: 10;
+
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 1.4%;
+  display: none;
+  animation: fade-grow 0.3s ease;
+  transform-origin: 50% top;
+}
+@keyframes fade-grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal__cart::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 44%;
+  border-width: 20px 30px;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+}
+
+.link__viewcart {
+  background-color: var(--primary);
+  color: white;
+  padding: 7px 10px;
+  margin-top: 5%;
+  border-radius: 7px;
+  width: 100%;
+  text-align: center;
+}
+.link__viewcart:hover {
+  opacity: 0.9;
+  color: white;
+}
+.icon-close {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.modal__cart-status{
+  
+}
+.icon__check-cart__status {
+  font-size: 1.7rem;
+  color: var(--warning);
+}
+.modal__cart.open {
+  display: flex;
+}
+/* end modal cart */
+
+.modalLogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: opa 0.4s linear;
+  transition: 0.4s linear;
+}
+@keyframes opa {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modalLogin.open {
+  display: flex;
+}
+.primary {
+  background-color: var(--primary);
+  color:white;
+}
+.modalLogin-container {
+  background-color: white;
+  position: relative;
+  width: 600px;
+  animation: fade-top 0.6s ease;
+}
+@keyframes fade-top {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modalLogin-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.modalLogin-header {
+  color: white;
+  background-color: var(--primary);
+}
+.icon__modalLogin-heading {
+  font-size: 2rem;
+}
+.modalLogin-heading {
+  font-size: 1.5rem;
+}
+.modalLogin-body-login {
+  flex: 1;
+}
+.modalLogin-body-register {
+  flex: 1;
+}
+.form-control {
+  padding: 18px;
+  font-size: 1.4rem;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3rem;
+}
+.input-group-text {
+  width: 40px;
+  justify-content: center;
+}
+.icon-input-group-text {
+  font-size: 1.3rem;
+}
+.input-group {
+}
+/* ẩn hiển mật khẩu */
+.box-hidOnPass{
+  position: relative;
+}
+.iconHidOnPass{
+  position: absolute;
+  right: 3%;
+  font-size: 1.1rem;
+  z-index: 1000;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%) ;
+}
+.losePassword {
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+a:hover {
+  color: var(--primary);
+}
+.modalLogin .btn {
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.modalLogin .btn:hover {
+  opacity: 0.9;
+}
+.icon-login {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.modalRegister-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.modalRegisterText {
+  font-size: 1.3rem;
+}
+.modalLogin-body-register ul {
+  list-style: square;
+  padding-left: 6%;
+}
+.modalRegisterText-li {
+  font-size: 1.3rem;
+}
+.link-createAccount {
+  color: white;
+  padding: 10px;
+}
+.link-createAccount:hover {
+  color: white;
+}
+  /* login with fb */
+  .heading_login-with{
+    font-size: 1.4rem;
+    color:var(--dark);
+  }
+  .icon__login-with{
+    font-size: 1.4rem;
+  }
+/* Modal Register */
+.modalRegister.open {
+  display: flex;
+}
+.modalRegister {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: opa 0.4s ease;
+}
+.modalRegister-content {
+  animation: fade-top 0.5s ease;
+}
+.register {
+  background: -webkit-linear-gradient(left, var(--primary), #ff96a3);
+  margin-top: 3%;
+  padding: 3%;
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.modalRegister-content-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.icon_modalRegister-content-close {
+  font-size: 2.3rem;
+  color: rgba(255, 255, 255, 0.918);
+}
+.register-left {
+  text-align: center;
+  color: #fff;
+  margin-top: 4%;
+}
+.register-left input {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 5% 10%;
+  font-size: 1.2rem;
+  width: 60%;
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #383d41;
+  margin-top: 30%;
+  margin-bottom: 3%;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+.register-left input:hover {
+  background-color: var(--dark);
+  color: white;
+}
+.register-right {
+  background: #f8f9fa;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.register-left img {
+  margin-top: 15%;
+  margin-bottom: 5%;
+  width: 25%;
+  -webkit-animation: mover 2s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.register-left p {
+  font-weight: lighter;
+  padding: 12%;
+  margin-top: -9%;
+  font-size: 1.3rem;
+}
+.register-left h3 {
+  font-size: 2rem;
+}
+.register .register-form {
+  padding: 10%;
+  margin-top: 10%;
+}
+.btnRegister {
+  float: right;
+  margin-top: 10%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 4% 10%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.4s ease;
+}
+.btnRegister:hover {
+  opacity: 0.8;
+}
+.legend__countryRegister {
+  color: #383d41;
+  font-size: 1.3rem;
+}
+.check__register {
+  font-size: 1.3rem;
+}
+.register .nav-tabs {
+  margin-top: 3%;
+  border: none;
+  background: var(--primary);
+  border-radius: 1.5rem;
+  width: 28%;
+  float: right;
+}
+.register .nav-tabs .nav-link {
+  padding: 2%;
+  height: 34px;
+  font-weight: 600;
+  color: #fff;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover {
+  border: none;
+}
+.register .nav-tabs .nav-link.active {
+  width: 100px;
+  color: #0062cc;
+  border: 2px solid #0062cc;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+.register-heading {
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: -15%;
+  color: #495057;
+  font-size: 1.8rem;
+}
+
+
+/* bs */
+.account__inner-content .form-select{
+  width:80%;
+  color:#495057;
+}

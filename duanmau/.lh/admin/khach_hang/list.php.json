@@ -1,0 +1,42 @@
+{
+    "sourceFile": "admin/khach_hang/list.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1658220614945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658220698706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,8 @@\n             $i++;\r\n         ?>\r\n             <tr>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n-                <th scope=\"row\"><?php echo $i; ?></th>\r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n                 <td><?php echo $ho_ten ?></td>\r\n"
+                },
+                {
+                    "date": 1658220938469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n             $i++;\r\n         ?>\r\n             <tr>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n+                <th scope=\"row\"><?php echo $i; ?></th>\r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n                 <td><?php echo $ho_ten ?></td>\r\n"
+                },
+                {
+                    "date": 1658220987062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $i++;\r\n         ?>\r\n             <tr>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n-                <th scope=\"row\"><?php echo $i; ?></th>\r\n+                \r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n                 <td><?php echo $ho_ten ?></td>\r\n"
+                },
+                {
+                    "date": 1658220992944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n             extract($item);\r\n             $i++;\r\n         ?>\r\n             <tr>\r\n+            <th scope=\"row\"><?php echo $i; ?></th>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n-                \r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n                 <td><?php echo $ho_ten ?></td>\r\n"
+                },
+                {
+                    "date": 1658220999445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             extract($item);\r\n             $i++;\r\n         ?>\r\n             <tr>\r\n-            <th scope=\"row\"><?php echo $i; ?></th>\r\n+                <th scope=\"row\"><?php echo $i; ?></th>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n"
+                },
+                {
+                    "date": 1658221015825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,8 @@\n             extract($item);\r\n             $i++;\r\n         ?>\r\n             <tr>\r\n-                <th scope=\"row\"><?php echo $i; ?></th>\r\n                 <td><input type=\"checkbox\" class=\"check\"></td>\r\n                 <td><?php echo $id_kh ?></td>\r\n                 <td><?php echo $ma_kh ?></td>\r\n                 <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n"
+                }
+            ],
+            "date": 1658220614945,
+            "name": "Commit-0",
+            "content": "<h5 class=\"alert alert-primary\">Danh sách khách hàng</h5>\r\n<h5 class=\"alert alert-success\" id=\"remove_element\"><?php if (isset($alert) && ($alert != \"\")) echo $alert; ?></h5>\r\n<table class=\"table \">\r\n    <thead>\r\n        <tr>\r\n            <th scope=\"col\">#</th>\r\n            <th scope=\"col\">ID </th>\r\n            <th scope=\"col\">Mã khách hàng</th>\r\n            <th scope=\"col\">Hình ảnh </th>\r\n            <th scope=\"col\">Họ tên</th>\r\n            <th scope=\"col\">Email</th>\r\n            <th scope=\"col\">Số điện thoại</th>\r\n            <th scope=\"col\">Vai trò</th>\r\n            <th scope=\"col\">Kích hoạt</th>\r\n            <th scope=\"col\">Sửa</th>\r\n            <th scope=\"col\">Xoá</th>\r\n\r\n        </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n        <?php\r\n        $i = 0;\r\n        foreach ($items as $item) {\r\n            extract($item);\r\n            $i++;\r\n        ?>\r\n            <tr>\r\n                <td><input type=\"checkbox\" class=\"check\"></td>\r\n                <th scope=\"row\"><?php echo $i; ?></th>\r\n                <td><?php echo $id_kh ?></td>\r\n                <td><?php echo $ma_kh ?></td>\r\n                <td><img style=\"width:70px\" src=\"<?= $ADMIN_URL ?>/khach_hang/upload/<?php echo $hinh ?>\" alt=\"\"></td>\r\n                <td><?php echo $ho_ten ?></td>\r\n                <td><?php echo $email ?></td>\r\n                <td><?php echo $so_dien_thoai ?></td>\r\n                <td><?php echo $vai_tro ?></td>\r\n                <td><?php echo $kich_hoat ?></td>\r\n                <td><a href=\"index.php?btn_edit&id_kh=<?php echo $id_kh ?>\">Sửa</a> </td>\r\n                <?php if (isset($_SESSION['khach_hang'])) {\r\n                    if ($_SESSION['khach_hang']['id_kh'] != $id_kh) { ?>\r\n                        <td><a onclick=\"return confirm('Bạn có muốn xoá  <?php echo $ma_kh ?> này không?')\" href=\"index.php?btn_delete&id_kh=<?php echo $id_kh ?>\">Xoá</a> </td>\r\n                    <?php\r\n                    } else { ?>\r\n                        <td><a onclick=\"return confirm('Bạn không thể xoá chính bạn')\" href=\"#\">Xoá</a> </td>\r\n                <?php\r\n                    }\r\n                }\r\n                ?>\r\n            </tr>\r\n\r\n    </tbody>\r\n<?php\r\n        }\r\n?>\r\n<tfoot>\r\n    <tr>\r\n        <td colspan=\"10\">\r\n            <a href=\"index.php\"><button class=\"btn btn-primary\">Thêm mới</button></a>\r\n            <label for=\"checkall\" class=\"btn btn-primary select\">Chọn tất cả</label>\r\n            <label for=\"checkall\" class=\"btn btn-primary unselect\">Bỏ chọn</label>\r\n            <input type=\"checkbox\" id=\"checkall\">\r\n        </td>\r\n\r\n\r\n    </tr>\r\n</tfoot>\r\n\r\n</table>\r\n\r\n<script>\r\n    var e = document.getElementById('remove_element');\r\n    if (e.textContent == '') {\r\n        e.remove();\r\n    }\r\n    var checks = document.querySelectorAll('.check');\r\n    var checkall = document.getElementById('checkall');\r\n    var select = document.querySelector('.select');\r\n    var unselect = document.querySelector('.unselect');\r\n   \r\n</script>"
+        }
+    ]
+}
